@@ -8,7 +8,8 @@ import { HttpClient } from "@angular/common/http";
 })
 
 export class ProductComponent implements OnInit {
-  displayedColumns: string[] = ['ProductId','ProductCode','ProductURL', 'Collection', 'AvailableSizes', 'MRP','Price'];
+        "ProductTitle": "Navy Melange Ankle Socks"
+        displayedColumns: string[] = ['ProductId','ProductCode','ProductTitle','ProductURL', 'Collection', 'AvailableSizes', 'MRP','Price', 'StyleName','StyleNumber', 'ProductTypeId'];
 
   products: any = [];
   dataSource: any = [];
