@@ -22,13 +22,13 @@ export class LoginComponent implements OnInit {
 
   get data() { return this.loginForm.controls; }
 
-  onSubmit() {    
+  onSubmit() {
     if (this.loginForm.invalid) {
       return;
     } else if (this.data.username.value == localStorage.getItem("username") && this.data.password.value == localStorage.getItem("password")) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/list?sortType=hightolow']);
     } else {
-      this.submitted = true;      
+      this.submitted = true;
     }
   }
 }

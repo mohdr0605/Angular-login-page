@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,13 +15,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTable } from "@angular/material/table";
+
+import { AngularMaterialModule } from './angular-material.module';
+
+import { FeedbackComponent } from './feedback/feedback.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule,
+    AngularMaterialModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
